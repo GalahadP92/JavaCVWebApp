@@ -10,8 +10,8 @@ pipeline {
     {
       steps {
         echo 'Building war'
-        bat ant -f build.xml
-        //bat 'ant clean compile test package war'
+        bat 'ant -f build.xml'
+         //bat 'ant clean compile test package war'
       }
     }
     stage('Testing')
