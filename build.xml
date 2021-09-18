@@ -3,9 +3,11 @@
               Any modifications will be overwritten.
               To include a user specific buildfile here, simply create one in the same
               directory with the processing instruction <?eclipse.ant.import?>
-              as the first entry and export the buildfile again. --><project basedir="." default="build" name="JenkinsPractice">
+              as the first entry and export the buildfile again. -->
+              <project basedir="." default="build" name="JenkinsPractice">
     <property environment="env"/>
     <property name="ECLIPSE_HOME" value="C:/Users/Usuario/eclipse/jee-2021-06/eclipse/"/>
+    <property name="Tomcat_Webapp" value="C:/Development/Tomcat 9.0.52/webapps/Test/"/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="13"/>
     <property name="source" value="13"/>
@@ -64,7 +66,7 @@
         <delete dir="build/classes"/>
     </target>
     <target depends="clean" name="cleanall"/>
-    <target depends="build-subprojects,build-project" name="build"/>
+    <target depends="build-subprojects,build-project, build-war" name="build"/>
     <target name="build-subprojects"/>
     <target depends="init" name="build-project">
         <echo message="${ant.project.name}: ${ant.file}"/>
@@ -84,14 +86,11 @@
         </unzip>
     </target>
   	<target name="build-war">
-  	    <war destfile="dist/abc.war" webxml="WebContent/WEB-INF/web.xml">
+      <echo message="Building war file"/>
+  	    <war destfile="${Tomcat_Webapp}JenkinsPractice.war" webxml="WebContent/WEB-INF/web.xml">
   	        <fileset dir="WebContent"/>
   	        <lib dir="WebContent/WEB-INF/lib"/>
   	        <classes dir="build/classes"/>
   	    </war>
-  	</target>
-    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
-        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
-        <antcall target="build"/>
-    </target>	
+  	</target>	
 </project>
