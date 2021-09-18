@@ -1,15 +1,22 @@
 pipeline {
   agent any
   stages {
-    stage('Log Ant version info') {
+    stage('Build war')
+    {
       steps {
-        sh 'ant -version'
+        echo 'Building war'
       }
     }
-    stage('GitHub Jenkins Ant Build') {
+    stage('Testing')
+    {
       steps {
-        git 'https://github.com/learn-devops-fast/rps-ant.git'
-        sh 'ant clean compile test package war'
+        echo 'Do the test'
+      }
+    }
+    stage('Deploying to tomcat')
+    {
+      steps {
+        echo 'Deploying to tomcart by runninc bat script'
       }
     }
   }
