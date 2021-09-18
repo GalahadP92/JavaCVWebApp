@@ -1,10 +1,17 @@
 pipeline {
   agent any
   stages {
+    stage('Log Ant version info') {
+      steps {
+        bat 'ant -version'
+      }
+    }
     stage('Build war')
     {
       steps {
         echo 'Building war'
+        bat ant -f build.xml
+        //bat 'ant clean compile test package war'
       }
     }
     stage('Testing')
