@@ -55,6 +55,7 @@
         <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/servlet-api.jar"/>
     </path>
     <target name="init">
+        <echo message="init called"/>
         <mkdir dir="build/classes"/>
         <copy includeemptydirs="false" todir="build/classes">
             <fileset dir="Java Resources/src">
@@ -63,6 +64,7 @@
         </copy>
     </target>
     <target name="clean">
+        <echo message="Clean called"/>
         <delete dir="build/classes"/>
     </target>
     <target depends="clean" name="cleanall"/>

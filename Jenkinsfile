@@ -4,6 +4,7 @@ pipeline {
     stage('Log Ant version info') {
       steps {
         bat 'ant -version'
+        bat 'java -version'
       }
     }
     stage('Build war')
