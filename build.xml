@@ -3,62 +3,73 @@
               Any modifications will be overwritten.
               To include a user specific buildfile here, simply create one in the same
               directory with the processing instruction <?eclipse.ant.import?>
+<<<<<<< HEAD
               as the first entry and export the buildfile again. -->
               <project basedir="." default="build" name="JenkinsPractice">
     <property environment="env"/>
     <property name="ECLIPSE_HOME" value="C:/Users/Usuario/eclipse/jee-2021-06/eclipse/"/>
     <property name="Tomcat_Webapp" value="C:/Development/Tomcat 9.0.52/webapps/Test/"/>
+=======
+              as the first entry and export the buildfile again. --><project basedir="." default="build-war" name="JavaCVWebApp">
+    <property environment="env"/>
+>>>>>>> develop
     <property name="debuglevel" value="source,lines,vars"/>
+    <property name="Tomcat_Webapp" value="C:/Development/Tomcat 9.0.52/webapps/Test/"/>
     <property name="target" value="13"/>
     <property name="source" value="13"/>
-    <path id="Server Runtime [apache-tomcat-9.0.46].libraryclasspath">
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/annotations-api.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/catalina-ant.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/catalina-ha.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/catalina-ssi.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/catalina-storeconfig.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/catalina-tribes.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/catalina.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/ecj-4.18.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/el-api.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/jasper-el.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/jasper.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/jaspic-api.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/jsp-api.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/servlet-api.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/tomcat-api.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/tomcat-coyote.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/tomcat-dbcp.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/tomcat-i18n-cs.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/tomcat-i18n-de.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/tomcat-i18n-es.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/tomcat-i18n-fr.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/tomcat-i18n-ja.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/tomcat-i18n-ko.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/tomcat-i18n-pt-BR.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/tomcat-i18n-ru.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/tomcat-i18n-zh-CN.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/tomcat-jdbc.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/tomcat-jni.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/tomcat-util-scan.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/tomcat-util.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/tomcat-websocket.jar"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/websocket-api.jar"/>
+    <path id="Web App Libraries.libraryclasspath">
+        <pathelement location="WebContent/WEB-INF/classes"/>
     </path>
-    <path id="Web App Libraries.libraryclasspath"/>
     <path id="EAR Libraries.libraryclasspath"/>
-    <path id="JenkinsPractice.classpath">
+    <path id="Server Runtime [Apache Tomcat v9.0 (2)].libraryclasspath">
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/annotations-api.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/catalina-ant.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/catalina-ha.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/catalina-ssi.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/catalina-storeconfig.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/catalina-tribes.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/catalina.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/ecj-4.20.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/el-api.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/jasper-el.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/jasper.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/jaspic-api.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/jsp-api.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/servlet-api.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/tomcat-api.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/tomcat-coyote.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/tomcat-dbcp.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/tomcat-i18n-cs.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/tomcat-i18n-de.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/tomcat-i18n-es.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/tomcat-i18n-fr.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/tomcat-i18n-ja.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/tomcat-i18n-ko.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/tomcat-i18n-pt-BR.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/tomcat-i18n-ru.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/tomcat-i18n-zh-CN.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/tomcat-jdbc.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/tomcat-jni.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/tomcat-util-scan.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/tomcat-util.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/tomcat-websocket.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/websocket-api.jar"/>
+    </path>
+    <path id="JavaCVWebApp.classpath">
         <pathelement location="build/classes"/>
         <path refid="Server Runtime [apache-tomcat-9.0.46].libraryclasspath"/>
         <path refid="Web App Libraries.libraryclasspath"/>
         <path refid="EAR Libraries.libraryclasspath"/>
-        <pathelement location="C:/Development/apache-tomcat-9.0.46/lib/servlet-api.jar"/>
+        <pathelement location="C:/Development/Tomcat 9.0.52/lib/servlet-api.jar"/>
+        <pathelement location="C:/Development/apache-tomcat-9.0.53/lib/servlet-api.jar"/>
+        <path refid="Server Runtime [Apache Tomcat v9.0 (2)].libraryclasspath"/>
     </path>
     <target name="init">
         <echo message="init called"/>
         <mkdir dir="build/classes"/>
         <copy includeemptydirs="false" todir="build/classes">
             <fileset dir="Java Resources/src">
+                <exclude name="**/*.launch"/>
                 <exclude name="**/*.java"/>
             </fileset>
         </copy>
@@ -74,10 +85,11 @@
         <echo message="${ant.project.name}: ${ant.file}"/>
         <javac debug="true" debuglevel="${debuglevel}" destdir="build/classes" includeantruntime="false" source="${source}" target="${target}">
             <src path="Java Resources/src"/>
-            <classpath refid="JenkinsPractice.classpath"/>
+            <classpath refid="JavaCVWebApp.classpath"/>
         </javac>
     </target>
     <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+<<<<<<< HEAD
     <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
         <copy todir="${ant.library.dir}">
             <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
@@ -88,11 +100,18 @@
         </unzip>
     </target>
   	<target name="build-war">
+=======
+  	<target depends="build" name="build-war">
+>>>>>>> develop
       <echo message="Building war file"/>
   	    <war destfile="${Tomcat_Webapp}JenkinsPractice.war" webxml="WebContent/WEB-INF/web.xml">
   	        <fileset dir="WebContent"/>
   	        <lib dir="WebContent/WEB-INF/lib"/>
   	        <classes dir="build/classes"/>
   	    </war>
+<<<<<<< HEAD
   	</target>	
+=======
+  	</target>
+>>>>>>> develop
 </project>
