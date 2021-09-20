@@ -3,16 +3,8 @@
               Any modifications will be overwritten.
               To include a user specific buildfile here, simply create one in the same
               directory with the processing instruction <?eclipse.ant.import?>
-<<<<<<< HEAD
-              as the first entry and export the buildfile again. -->
-              <project basedir="." default="build" name="JenkinsPractice">
-    <property environment="env"/>
-    <property name="ECLIPSE_HOME" value="C:/Users/Usuario/eclipse/jee-2021-06/eclipse/"/>
-    <property name="Tomcat_Webapp" value="C:/Development/Tomcat 9.0.52/webapps/Test/"/>
-=======
               as the first entry and export the buildfile again. --><project basedir="." default="build-war" name="JavaCVWebApp">
     <property environment="env"/>
->>>>>>> develop
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="Tomcat_Webapp" value="C:/Development/Tomcat 9.0.52/webapps/Test/"/>
     <property name="target" value="13"/>
@@ -89,29 +81,12 @@
         </javac>
     </target>
     <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
-<<<<<<< HEAD
-    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
-        <copy todir="${ant.library.dir}">
-            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
-        </copy>
-        <unzip dest="${ant.library.dir}">
-            <patternset includes="jdtCompilerAdapter.jar"/>
-            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
-        </unzip>
-    </target>
-  	<target name="build-war">
-=======
   	<target depends="build" name="build-war">
->>>>>>> develop
       <echo message="Building war file"/>
   	    <war destfile="${Tomcat_Webapp}JenkinsPractice.war" webxml="WebContent/WEB-INF/web.xml">
   	        <fileset dir="WebContent"/>
   	        <lib dir="WebContent/WEB-INF/lib"/>
   	        <classes dir="build/classes"/>
   	    </war>
-<<<<<<< HEAD
-  	</target>	
-=======
   	</target>
->>>>>>> develop
 </project>
